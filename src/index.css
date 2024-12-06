@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -11,3 +15,97 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: 'Minion Pro Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/public/fonts/MinionPro-Regular.woff') format('woff');
+  }
+  
+
+  @font-face {
+  font-family: 'Minion Pro Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/public/fonts/MinionPro-It.woff')format('woff');
+  }
+  
+
+  @font-face {
+  font-family: 'Minion Pro Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/public/fonts/MinionPro-Medium.woff') format('woff');
+  }
+  
+
+  @font-face {
+  font-family: 'Minion Pro Medium Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/public/fonts/MinionPro-MediumIt.woff') format('woff');
+  }
+  
+
+  @font-face {
+  font-family: 'Minion Pro Semibold';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/public/fonts/MinionPro-Semibold.woff') format('woff');
+  }
+  
+
+  @font-face {
+  font-family: 'Minion Pro Semibold Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/public/fonts/MinionPro-SemiboldIt.woff') format('woff');
+  }
+  
+
+  @font-face {
+  font-family: 'Minion Pro Bold Condensed';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/public/fonts/MinionPro-BoldCn.woff') format('woff');
+  }
+  
+
+  @font-face {
+  font-family: 'Minion Pro Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/public/fonts/MinionPro-Bold.woff') format('woff');
+  }
+  
+
+  @font-face {
+  font-family: 'Minion Pro Bold Condensed Italic';
+  font-style: normal;
+  font-weight: normal;
+  src:url('/public/fonts/MinionPro-BoldCnIt.woff') format('woff');
+  }
+  
+
+  @font-face {
+  font-family: 'Minion Pro Bold Italic';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/public/fonts/MinionPro-BoldIt.woff') format('woff');
+  }
+
+
+  @font-face {
+    font-family: 'Spectral Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: url('/public/fonts/spectral-regular.woff')format('woff');
+    }
+
+    @font-face {
+      font-family: 'Spectral Medium';
+      font-style: normal;
+      font-weight: normal;
+      src: url('/public/fonts/spectral-medium.woff')format('woff');
+      }
