@@ -11,7 +11,7 @@ const Result1 = () => {
   const location = useLocation();
   const { remainingTime } = location.state || {};
   const handleNext = () => {
-    navigate("/redirect"); // Перенаправление на страницу Redirect
+    navigate("/final"); // Перенаправление на страницу Redirect
   };
   
 
@@ -30,7 +30,7 @@ const Result1 = () => {
 
 
   const goToPrevious = () => {
-    navigate("/verbal1");
+    navigate("/math2");
   };
 
   const toggleTimer = () => {
@@ -159,7 +159,7 @@ const Result1 = () => {
 
       {/* Main Content */}
         <main className="flex flex-1 font-mainText mt-2 mb-2 mx-auto bg-[#FAFAFA] w-full h-full">
-            <img src="/ver_modu1.png" className="w-[1200px] h-[600px] mx-auto"></img>
+            <img src="/math_modu2.png" className="w-[1200px] h-[600px] mx-auto"></img>
         </main>
 
       {/* Footer */}
@@ -173,7 +173,7 @@ const Result1 = () => {
           </span>
           <div>
             <span className="tracking-tight bg-black text-white font-medium font-sans rounded-[8px] flex items-center flex-row w-[150px] h-[34px] text-center justify-center ml-[-24px] text-[15px]">
-              Question 27 of 27
+              Question 22 of 22
               <FiChevronUp className="ml-1" />
             </span>
           </div>

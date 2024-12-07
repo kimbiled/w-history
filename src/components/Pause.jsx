@@ -1,15 +1,23 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom"; // Импортируем navigate
 
 const BreakTimer = () => {
   const [timeLeft, setTimeLeft] = useState(600); // 10 минут = 600 секунд
+  const navigate = useNavigate(); // Хук для перенаправления
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setTimeLeft((prev) => (prev > 0 ? prev - 1 : 0));
+      setTimeLeft((prev) => {
+        if (prev <= 1) {
+          clearInterval(timer); // Останавливаем таймер
+          navigate("/math"); // Перенаправляем на другую страницу
+        }
+        return prev > 0 ? prev - 1 : 0;
+      });
     }, 1000);
 
     return () => clearInterval(timer); // Очистить таймер при размонтировании
-  }, []);
+  }, [navigate]);
 
   const formatTime = (seconds) => {
     const minutes = Math.floor(seconds / 60);
@@ -19,13 +27,13 @@ const BreakTimer = () => {
 
   return (
     <div className="h-screen flex bg-[#1D1D1D] text-white font-sans">
-        <div className="absolute bottom-6 left-16 text-xl font-medium">
-            <p>Ansar Dussaliyev</p>
-        </div>
-        <div className="absolute top-6 right-8 flex flex-row gap-1 w-16 justify-center items-center rounded bg-[#4d4d4d] h-6">
-            <span className="text-[10px] font-medium tracking-wide">100%</span>
-            <img src="/battery.png" alt="battery" className="w-4 h-4" />
-          </div>
+      <div className="absolute bottom-6 left-16 text-xl font-medium">
+        <p>Alan Yermukhan</p>
+      </div>
+      <div className="absolute top-6 right-8 flex flex-row gap-1 w-16 justify-center items-center rounded bg-[#4d4d4d] h-6">
+        <span className="text-[10px] font-medium tracking-wide">100%</span>
+        <img src="/battery2.png" alt="battery" className="w-4 h-4" />
+      </div>
       {/* Левая часть: Таймер */}
       <div className="w-1/2 flex justify-center items-center">
         <div className="flex flex-col items-center justify-center border-2 ml-18 border-gray-500 p-6 rounded-lg w-[340px] h-[150px]">
@@ -44,18 +52,22 @@ const BreakTimer = () => {
             <span className="font-semibold text-white">Resume Testing Now</span>{" "}
             button will appear and you'll start the next session.
           </p>
-          <h2 className="font-semibold text-white mb-2">Follow these rules during the break:</h2>
+          <h2 className="font-semibold text-white mb-2">
+            Follow these rules during the break:
+          </h2>
           <ol className="text-gray-300 list-decimal list-inside space-y-4 text-md">
             <li className="ml-1">Do not disturb students who are still testing.</li>
             <li className="ml-1">Do not exit the app or close your laptop.</li>
             <li className="ml-1">
-              Do not access phones, smartwatches, textbooks,<br/>notes, or the
-              internet.
+              Do not access phones, smartwatches, textbooks,
+              <br />
+              notes, or the internet.
             </li>
             <li className="ml-1">Do not eat or drink near any testing device.</li>
             <li className="ml-1">
-              Do not speak in the test room; outside the test<br/> room, do not
-              discuss the exam with anyone.
+              Do not speak in the test room; outside the test
+              <br />
+              room, do not discuss the exam with anyone.
             </li>
           </ol>
         </div>

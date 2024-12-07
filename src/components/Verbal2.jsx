@@ -3,7 +3,7 @@ import { FiClock, FiChevronDown, FiChevronUp } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 
 const QuestionPage = () => {
-  const [timeRemaining, setTimeRemaining] = useState(600); // Таймер (10 минут)
+  const [timeRemaining, setTimeRemaining] = useState(1920); // Таймер (10 минут)
   const [showTimer, setShowTimer] = useState(true); // Показ таймера
   const [currentQuestion, setCurrentQuestion] = useState(1); // Текущий номер вопроса
   const [currentSection, setCurrentSection] = useState(1); // Текущая секция
@@ -90,15 +90,15 @@ const QuestionPage = () => {
         ]
       },
       {
-        "image": "/verbal/Verbal11.png",
-        "text": "/verbal/qv11.png",
-        "options": [
-           "In the second test administration, participants who took 2–4 days of leave had higher average attentiveness scores than did those who took no leave, but in the third test administration, those who took no leave had higher average scores than those who took 1–5 weeks of leave.",
-           "In the first test administration, participants who took 2–4 days of leave had lower average attentiveness scores than did those who took 1–5 weeks of leave and those who took no leave.",
-           "In both the second and third test administrations, participants who took 2–4 days of leave had higher average attentiveness scores than did participants who took 1–5 weeks of leave.",
-           "In the second and third test administrations, participants who took 2–4 days of leave had higher average attentiveness scores than did those who took no leave."
-  ]
-      },
+        "image": "/verbal/Verbal8.png",
+         "text": "/verbal/qv8.png",
+         "options": [
+         "By emphasizing that there are still advances being made in automated artistic style classification",
+         "By criticizing previous research into automated artistic style classification systems for focusing on a narrow group of styles",
+         "By arguing that most people are not able to correctly identify the style of paintings that they are shown",
+         "By suggesting that people may eventually develop more uniform and accepted ideas about artistic styles and their boundaries"
+         ]
+       },
       {
         "image": "/verbal/Verbal12.png",
         "text": "/verbal/qv12.png",
@@ -120,23 +120,23 @@ const QuestionPage = () => {
         ]
       },
       {
-        "image": "/verbal/Verbal14.png",
-        "text": "/verbal/qv14.png",
+        "image": "/verbal/Verbal9.png",
+        "text": "/verbal/qv9.png",
         "options": [
-           "flew for longer distances than did other pterosaur species that had oversized head crests.",
-           "had longer wings than other pterosaur species considered to have been comfortable walking.",
-           "had a smaller head than researchers expected based on the earlier T. navigans skull specimens.",
-           "flew for shorter distances and spent more time walking than researchers previously thought."
+          "It provided preliminary evidence that microorganism-mediated nutrient cycling was accelerated in the transplanted cores.",
+          "It suggested that temperature-induced changes in microorganism activity may be occurring at increasingly high elevations.",
+          "It ruled out a potential alternative explanation for the acceleration in microorganism-mediated nutrient cycling.",
+          "It clarified that microorganism activity levels in the plant-soil cores varied depending on which microorganisms comprised the community."
         ]
       }, 
       {
-        "image": "/verbal/Verbal15.png",
-        "text": "/verbal/qv15.png",
+        "image": "/verbal/Verbal12.png",
+        "text": "/verbal/qv12.png",
         "options": [
-           "the Aztecs would have disputed the idea that the morality of an individual’s actions can be assessed by appealing to standards of behavior that are independent of the individual’s social circumstances.",
-           "the Aztecs would not have accepted the notion that the morality of an individual’s actions can be fairly evaluated by people who do not live in the same society as that individual.",
-           "actions by members of Aztec society who contributed a great deal to their community could be judged as morally good even if those actions were inconsistent with behaviors the Aztecs regarded as good in all contexts.",
-           "similar actions performed by people in different social roles in Aztec society would have been regarded as morally equivalent unless those actions led to different outcomes for the community."
+           "most lizard species use about the same percentage of their maximal speed when escaping predation as they do when pursuing prey.",
+           "multiple lizard species move at an average of less than 90% of their maximal speed while escaping predation.",
+           "more lizard species use, on average, 90%–100% of their maximal speed while escaping predation than use any other percentage of their maximal speed.",
+           "at least 4 lizard species use, on average, less than 100% of their maximal speed while pursuing prey."
         ]
       },
       {
@@ -261,6 +261,7 @@ const QuestionPage = () => {
       }
   ]
   
+  
 
   useEffect(() => {
     if (timeRemaining > 0) {
@@ -279,7 +280,7 @@ const QuestionPage = () => {
     if (currentQuestion < 27) {
       setCurrentQuestion((prev) => prev + 1);
     } else {
-      navigate("/results"); // Переход на страницу результатов
+      navigate("/results2"); // Переход на страницу результатов
     }
   };
 
@@ -321,43 +322,48 @@ const QuestionPage = () => {
 
             {/* Timer */}
             <div className="absolute left-1/2 transform -translate-x-1/2 text-center mt-8 tracking-tight">
-              {showTimer ? (
-                <>
-                  <div
-                    className={`text-sm ${
-                      timeRemaining <= 300 ? "text-red-600" : "text-gray-800"
-                    }`}
-                  >
-                    <span className="font-bold text-[20px] ">{formatTime(timeRemaining)}</span>
-                  </div>
-                  <button
-                    className="mt-[8px]"
-                    onClick={toggleTimer}
-                  >
-                    <img
-                      src="/hide.png"
-                      alt="show"
-                      className="w-[54px]"
-                    />
-                  </button>
-                </>
-              ) : (
-                <div className="flex flex-col items-center gap-4">
-                  <div className="text-gray-700 mt-[-12px]">
-                    <img src="/timer.png" alt="timer" className="w-4 h-5" />
-                  </div>
-                  <button
-                    className="mt-[-5px]"
-                    onClick={toggleTimer}
-                  >
-                    <img
-                      src="/show.png"
-                      alt="show"
-                      className="w-[54px]"
-                    />
-                  </button>
-                </div>
-              )}
+            {showTimer ? (
+  <>
+    <div
+      className={`text-sm ${
+        timeRemaining <= 300 ? "text-red-600" : "text-gray-800"
+      }`}
+    >
+      <span className="font-bold text-[20px] ">
+        {formatTime(timeRemaining)}
+      </span>
+    </div>
+    {timeRemaining > 300 && ( // Показываем кнопку только если осталось больше 5 минут
+      <button
+        className="mt-[8px]"
+        onClick={toggleTimer}
+      >
+        <img
+          src="/hide.png"
+          alt="show"
+          className="w-[54px]"
+        />
+      </button>
+    )}
+  </>
+) : (
+  <div className="flex flex-col items-center gap-4">
+    <div className="text-gray-700 mt-[-12px]">
+      <img src="/timer.png" alt="timer" className="w-4 h-5" />
+    </div>
+    <button
+      className="mt-[-5px]"
+      onClick={toggleTimer}
+    >
+      <img
+        src="/show.png"
+        alt="show"
+        className="w-[54px]"
+      />
+    </button>
+  </div>
+)}
+
             </div>
 
             {/* Highlights & More */}
@@ -451,29 +457,31 @@ const QuestionPage = () => {
                     <img src={questionsData[currentQuestion - 1].text} alt="question" className="h-auto"/>
                 </div>
                 <div className="space-y-3 font-sans">
-                  {questionsData[currentQuestion - 1].options.map((option, index) => (
-                    <button
-                      key={index}
-                      onClick={() => handleOptionSelection(option)}
-                      className={`flex items-center w-full text-left border rounded-md p-2 transition ${
-                        selectedOption === option
-                          ? "border-[#374BC5] text-[#374BC5] bg-blue-50"
-                          : "border-gray-400 text-gray-700 hover:bg-blue-50"
-                      }`}
-                    >
-                      <span
-                        className={`w-6 h-6 flex items-center justify-center border rounded-full mr-3 transition ${
-                          selectedOption === option
-                            ? "border-[#374BC5] bg-[#374BC5] text-white"
-                            : "border-gray-400 text-gray-700"
-                        }`}
-                      >
-                        {String.fromCharCode(65 + index)} {/* A, B, C, D */}
-                      </span>
-                      <span className="text-sm font-medium">{option}</span>
-                    </button>
-                  ))}
-                </div>
+  {questionsData[currentQuestion - 1].options.map((option, index) => (
+    <button
+      key={index}
+      onClick={() => handleOptionSelection(option)}
+      className={`flex items-start w-full text-left text-sm border rounded-lg p-2 transition ${
+        selectedOption === option
+          ? "border-[#374BC5] text-[#374BC5] bg-blue-50"
+          : "border-gray-400 text-gray-700 hover:bg-blue-50"
+      }`}
+    >
+      {/* Индикатор с буквой */}
+      <span
+        className={`w-6 h-6 flex-shrink-0 flex items-center justify-center border-[2px] rounded-full mr-3 transition ${
+          selectedOption === option
+            ? "border-gray-900 bg-[#374BC5] text-white"
+            : "border-gray-700 text-gray-700"
+        }`}
+      >
+        {String.fromCharCode(65 + index)} {/* A, B, C, D */}
+      </span>
+      {/* Текст ответа */}
+      <span className="text-sm font-medium leading-tight">{option}</span>
+    </button>
+  ))}
+</div>
               </>
             )}
           </div>
@@ -488,7 +496,7 @@ const QuestionPage = () => {
         </div>
         <div className="flex justify-between items-center p-4 ">
           <span className="text-gray-800 px-6 text-lg font-medium">
-            Ivan Ivanov
+          Alan Yermukhan
           </span>
           <div>
             <span className="tracking-tight bg-black text-white font-medium font-sans rounded-[8px] flex items-center flex-row w-[150px] h-[34px] text-center justify-center ml-[-24px] text-[15px]">

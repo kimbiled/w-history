@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FiClock, FiChevronDown, FiChevronUp } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-const Result1 = () => {
+const Result2 = () => {
   const [timeRemaining, setTimeRemaining] = useState(10); // Таймер (10 минут)
   const [showTimer, setShowTimer] = useState(true); // Показ таймера
   const [currentQuestion, setCurrentQuestion] = useState(1); // Текущий номер вопроса
@@ -11,7 +11,7 @@ const Result1 = () => {
   const location = useLocation();
   const { remainingTime } = location.state || {};
   const handleNext = () => {
-    navigate("/redirect"); // Перенаправление на страницу Redirect
+    navigate("/redirect2"); // Перенаправление на страницу Redirect
   };
   
 
@@ -30,7 +30,7 @@ const Result1 = () => {
 
 
   const goToPrevious = () => {
-    navigate("/verbal1");
+    navigate("/verbal2");
   };
 
   const toggleTimer = () => {
@@ -159,7 +159,7 @@ const Result1 = () => {
 
       {/* Main Content */}
         <main className="flex flex-1 font-mainText mt-2 mb-2 mx-auto bg-[#FAFAFA] w-full h-full">
-            <img src="/ver_modu1.png" className="w-[1200px] h-[600px] mx-auto"></img>
+            <img src="/ver_modu2.png" className="w-[1200px] h-[600px] mx-auto"></img>
         </main>
 
       {/* Footer */}
@@ -198,4 +198,4 @@ const Result1 = () => {
   );
 };
 
-export default Result1;
+export default Result2;

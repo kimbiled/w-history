@@ -109,3 +109,35 @@ code {
       font-weight: normal;
       src: url('/public/fonts/spectral-medium.woff')format('woff');
       }
+/* Убираем кнопки вверх/вниз */
+.custom-scroll::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* Устанавливаем ширину скроллбара */
+.custom-scroll::-webkit-scrollbar {
+  width: 6px; 
+  margin-left: 10px;/* Ширина вертикального скроллбара */
+}
+
+/* Трек скроллбара (фон) */
+.custom-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Цвет трека */
+  margin: 0 4px; /* Отодвигаем трек от края контейнера */
+  border-radius: 8px; /* Скругление трека */
+}
+
+/* Бегунок скроллбара */
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: #888; /* Цвет бегунка */
+  border-radius: 8px; /* Скругление краёв */
+  min-height: 50px; /* Минимальная высота бегунка */
+}
+
+/* При наведении */
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Цвет при наведении */
+}
+
+
+
