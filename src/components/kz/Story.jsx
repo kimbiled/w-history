@@ -110,13 +110,13 @@ export default function Story() {
 
   return (
     <div className="min-h-screen p-8 mt-24 mb-24 text-center">
-      <h1 className="text-5xl font-bold text-gray-900 leading-tight pb-6">Табысты оқиғалар</h1>
+      <h1 className="text-5xl font-bold text-[#A67F78] leading-tight pb-6">Табысты оқиғалар</h1>
       <div className="flex justify-center gap-4 mb-8">
         {categories.map(category => (
           <button 
             key={category} 
             onClick={() => setSelectedCategory(category)}
-            className={`px-4 py-2 rounded-lg ${selectedCategory === category ? "bg-black text-white" : "bg-white text-black"}`}
+            className={`px-4 py-2 rounded-lg ${selectedCategory === category ? "bg-[#A67F78] text-white" : "bg-white text-black"}`}
           >
             {category}
           </button>

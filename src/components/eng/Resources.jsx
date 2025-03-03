@@ -18,7 +18,7 @@ const Resources = () => {
 
     return (
         <div className="container mx-auto px-6 py-12 mt-16">
-            <h1 className="text-5xl font-bold text-black text-center pb-8">Resources</h1>
+            <h1 className="text-5xl font-bold text-[#A67F78] text-center pb-8">Resources</h1>
             <p className="text-lg text-gray-500 text-center max-w-3xl mx-auto pb-6">
                 Here you can find useful research, articles, and publications dedicated to gender issues, the role of women in science, economy, and society in Kazakhstan.
             </p>

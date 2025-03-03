@@ -18,7 +18,7 @@ const Resources = () => {
 
     return (
         <div className="container mx-auto px-6 py-12 mt-16">
-            <h1 className="text-5xl font-bold text-black text-center pb-8">Ресурстар</h1>
+            <h1 className="text-5xl font-bold text-[#A67F78] text-center pb-8">Ресурстар</h1>
             <p className="text-lg text-gray-500 text-center max-w-3xl mx-auto pb-6">
                 Мұнда гендерлік мәселелерге, Қазақстандағы әйелдердің ғылым, экономика және қоғамдағы рөліне арналған пайдалы зерттеулер, мақалалар және жарияланымдар жиналған.
             </p>

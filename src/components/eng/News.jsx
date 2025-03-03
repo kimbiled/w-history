@@ -27,7 +27,7 @@ const News = () => {
     return (
         <section className="mt-16 mb-16">
             <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
-                <h1 className="text-5xl font-bold text-black leading-tight text-center pb-8">News and Events</h1>
+                <h1 className="text-5xl font-bold text-[#A67F78] leading-tight text-center pb-8">News and Events</h1>
                 <p className="text-lg text-gray-500 text-center max-w-3xl mx-auto">
                     Stay updated with the latest events, achievements, and initiatives aimed at supporting women in Kazakhstan.
                 </p>

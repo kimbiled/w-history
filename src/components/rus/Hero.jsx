@@ -13,9 +13,9 @@ const Hero = () => {
 
       <div className="relative flex flex-col items-start w-full max-w-2xl px-4 mx-auto md:px-0 lg:px-8 lg:max-w-screen-xl">
         <div className="mb-16 lg:my-40 lg:max-w-lg lg:pr-5">
-          <h2 className="mb-5 xl:text-5xl font-bold text-white sm:text-4xl">
+          <h2 className="mb-5 xl:text-[44px] font-bold text-white sm:text-4xl">
             Добро пожаловать в
-            <p className="text-[#A67F78]"> Цифровой архив</p>
+            <p className="text-[#A67F78] mt-1"> Цифровой архив</p>
             женщин Казахстана
           </h2>
           <p className="pr-5 mb-5 xl:text-lg text-gray-300 md:text-lg">
