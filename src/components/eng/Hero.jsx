@@ -7,8 +7,7 @@
           <div className="absolute inset-0 w-full h-full bg-gray-900 clip-diagonal"></div>
           <img
             className="object-cover w-full h-56 rounded shadow-lg lg:rounded-none lg:shadow-none md:h-96 lg:h-full opacity-70 clip-diagonal"
-            src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
-            alt=""
+            src={main} alt=""
           />
         </div>
   
