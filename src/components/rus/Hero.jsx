@@ -1,4 +1,4 @@
-import main from '../../assets/images/main.JPG'
+import main from '../../assets/images/main.jpg'
 const Hero = () => {
   return (
     <div className="relative flex flex-col-reverse py-16 lg:pt-0 lg:flex-col lg:pb-0 bg-gray-900">
